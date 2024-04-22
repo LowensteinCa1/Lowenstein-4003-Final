@@ -37,11 +37,9 @@ fig_new.show()
 
 # %%
 #Image Set Up
-image_path = 'image.png'
-
-html.Img(src=image_path)
-
 pil_img = Image.open("image.png")
+
+html.Img(src=pil_img)
 
 def b64_image(image_filename):
     with open(image_filename, 'rb') as f:
@@ -112,7 +110,7 @@ app.layout = html.Div([
     ]),
     html.Div([
         html.Div([
-            html.Img(src=image_path, className='logo', style={'width': '200px', 'height': '200px'}),
+            html.Img(src=pil_img, className='logo', style={'width': '200px', 'height': '200px'}),
         ], style={'position': 'absolute', 'top': '30px', 'right': '30px', 'zIndex': '2'}),
     ]),
     html.Div([
