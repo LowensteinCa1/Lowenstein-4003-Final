@@ -18,7 +18,7 @@ from PIL import Image
 
 # %%
 #import data
-data= pd.read_csv('UPDATED_data.csv')
+data= pd.read_csv('data/UPDATED_data.csv')
 
 # %%
 # build a bar chart
@@ -37,7 +37,7 @@ fig_new.show()
 
 # %%
 #Image Set Up
-pil_img = Image.open("image.png")
+pil_img = Image.open("assets/image.png")
 
 html.Img(src=pil_img)
 
